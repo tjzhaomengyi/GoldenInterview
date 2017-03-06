@@ -17,7 +17,7 @@ public class ThreeArrayMakeAStack {
 		}
 		//栈指针自增，然后更新栈顶元素的值
 		stackPointer[stackNum]++;
-		bu
+		
 	}	
 		
 	
