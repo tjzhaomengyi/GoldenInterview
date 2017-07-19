@@ -1,22 +1,24 @@
-package com.mikezhao.MergeSortCommon;
+package com.mikemyzhao.sort;
 
-public class MergeSort {  
+import java.util.Arrays;
+
+public class MergeSortCommon {  
     /** 
-     * ¹é²¢ÅÅĞò 
-     * ¼ò½é:½«Á½¸ö£¨»òÁ½¸öÒÔÉÏ£©ÓĞĞò±íºÏ²¢³ÉÒ»¸öĞÂµÄÓĞĞò±í ¼´°Ñ´ıÅÅĞòĞòÁĞ·ÖÎªÈô¸É¸ö×ÓĞòÁĞ£¬Ã¿¸ö×ÓĞòÁĞÊÇÓĞĞòµÄ¡£È»ºóÔÙ°ÑÓĞĞò×ÓĞòÁĞºÏ²¢ÎªÕûÌåÓĞĞòĞòÁĞ 
-     * Ê±¼ä¸´ÔÓ¶ÈÎªO(nlogn) 
-     * ÎÈ¶¨ÅÅĞò·½Ê½ 
-     * @param nums ´ıÅÅĞòÊı×é 
-     * @return Êä³öÓĞĞòÊı×é 
+     * å½’å¹¶æ’åº 
+     * ç®€ä»‹:å°†ä¸¤ä¸ªï¼ˆæˆ–ä¸¤ä¸ªä»¥ä¸Šï¼‰æœ‰åºè¡¨åˆå¹¶æˆä¸€ä¸ªæ–°çš„æœ‰åºè¡¨ å³æŠŠå¾…æ’åºåºåˆ—åˆ†ä¸ºè‹¥å¹²ä¸ªå­åºåˆ—ï¼Œæ¯ä¸ªå­åºåˆ—æ˜¯æœ‰åºçš„ã€‚ç„¶åå†æŠŠæœ‰åºå­åºåˆ—åˆå¹¶ä¸ºæ•´ä½“æœ‰åºåºåˆ— 
+     * æ—¶é—´å¤æ‚åº¦ä¸ºO(nlogn) 
+     * ç¨³å®šæ’åºæ–¹å¼ 
+     * @param nums å¾…æ’åºæ•°ç»„ 
+     * @return è¾“å‡ºæœ‰åºæ•°ç»„ 
      */  
     public static int[] sort(int[] nums, int low, int high) {  
         int mid = (low + high) / 2;  
         if (low < high) {  
-            // ×ó±ß  
+            // å·¦è¾¹  
             sort(nums, low, mid);  
-            // ÓÒ±ß  
+            // å³è¾¹  
             sort(nums, mid + 1, high);  
-            // ×óÓÒ¹é²¢  
+            // å·¦å³å½’å¹¶  
             merge(nums, low, mid, high);  
         }  
         return nums;  
@@ -24,11 +26,11 @@ public class MergeSort {
   
     public static void merge(int[] nums, int low, int mid, int high) {  
         int[] temp = new int[high - low + 1];  
-        int i = low;// ×óÖ¸Õë  
-        int j = mid + 1;// ÓÒÖ¸Õë  
+        int i = low;// å·¦æŒ‡é’ˆ  
+        int j = mid + 1;// å³æŒ‡é’ˆ  
         int k = 0;  
   
-        // °Ñ½ÏĞ¡µÄÊıÏÈÒÆµ½ĞÂÊı×éÖĞ  
+        // æŠŠè¾ƒå°çš„æ•°å…ˆç§»åˆ°æ–°æ•°ç»„ä¸­  
         while (i <= mid && j <= high) {  
             if (nums[i] < nums[j]) {  
                 temp[k++] = nums[i++];  
@@ -37,29 +39,29 @@ public class MergeSort {
             }  
         }  
   
-        // °Ñ×ó±ßÊ£ÓàµÄÊıÒÆÈëÊı×é  
+        // æŠŠå·¦è¾¹å‰©ä½™çš„æ•°ç§»å…¥æ•°ç»„  
         while (i <= mid) {  
             temp[k++] = nums[i++];  
         }  
   
-        // °ÑÓÒ±ß±ßÊ£ÓàµÄÊıÒÆÈëÊı×é  
+        // æŠŠå³è¾¹è¾¹å‰©ä½™çš„æ•°ç§»å…¥æ•°ç»„  
         while (j <= high) {  
             temp[k++] = nums[j++];  
         }  
   
-        // °ÑĞÂÊı×éÖĞµÄÊı¸²¸ÇnumsÊı×é  
+        // æŠŠæ–°æ•°ç»„ä¸­çš„æ•°è¦†ç›–numsæ•°ç»„  
         for (int k2 = 0; k2 < temp.length; k2++) {  
             nums[k2] = temp[k2];  
         }  
     }  
   
       
-    // ¹é²¢ÅÅĞòµÄÊµÏÖ  
+    // å½’å¹¶æ’åºçš„å®ç°  
     public static void main(String[] args) {  
   
         int[] nums = { 2, 7, 8, 3, 1, 6, 9, 0, 5, 4 };  
   
-        MergeSort.sort(nums, 0, nums.length-1);  
+        MergeSortCommon.sort(nums, 0, nums.length-1);  
         System.out.println(Arrays.toString(nums));  
     }  
 }  
