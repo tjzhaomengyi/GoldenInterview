@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;com.mikemyzhao.sort.HillSort.java&apos; to &apos;ShellSort.java&apos;&#x0D;&#x0A;- Original project: &apos;GlodenInterview&apos;&#x0D;&#x0A;- Original element: &apos;com.mikemyzhao.sort.HillSort.java&apos;&#x0D;&#x0A;- Renamed element: &apos;com.mikemyzhao.sort.ShellSort.java&apos;" description="Rename compilation unit &apos;HillSort.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;com.mikemyzhao.sort{HillSort.java" name="ShellSort.java" references="false" stamp="1500559910295" version="1.0"/>
+</session>

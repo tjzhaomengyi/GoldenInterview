@@ -1,0 +1,20 @@
+INDEX VERSION 1.127+E:\code\MyCode\GitHub\GoldenInterview\.metadata\.plugins\org.eclipse.jdt.core
+1447415247.index
+4186199963.index
+1684396422.index
+2456199046.index
+864929286.index
+3130789293.index
+3707624763.index
+2742573451.index
+1428765634.index
+3731945466.index
+2794701966.index
+1868769637.index
+51096386.index
+1751057799.index
+2634802067.index
+2960630600.index
+3619823470.index
+2072612282.index
+529033466.index
