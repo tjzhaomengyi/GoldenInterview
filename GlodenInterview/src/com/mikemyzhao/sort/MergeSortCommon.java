@@ -49,7 +49,7 @@ public class MergeSortCommon {
             temp[k++] = nums[j++];  
         }  
   
-        // 把新数组中的数覆盖nums数组  
+        // 把临时数组中的数覆盖原来nums数组  
         for (int k2 = 0; k2 < temp.length; k2++) {  
             nums[k2] = temp[k2];  
         }  
